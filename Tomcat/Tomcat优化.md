@@ -100,7 +100,9 @@ AJPv13协议是面向包的。WEB服务器和Servlet容器通过TCP连接来交�
        redirectPort="8443" />
 ```
 保存退出，重启tomcat，查看效果。
-![](../img/Tomcat/Tomcat优化-启用线程池.png)
+![](../img/Tomcat/Tomcat优化-启用线程池.png)  
+在页面中显示最大线程数为-1，这个是正常的，仅仅是显示的问题，实际使用的是指定的值。如果配置了一个Executor，则该属性的任何值将被正确记录，但是它将被显示为-1。
+
 ### tomcat的三种运行模式
 tomcat的运行模式有3种：
 
