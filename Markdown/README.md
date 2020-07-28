@@ -13,6 +13,7 @@
       3. Markdown PDF(导出html、pdf等)
       4. Markdown Preview Github Styling(github风格预览)
       5. PlantUML(代码化的各种类型图生成)
+      6. Draw.io Integration(画各种类型图插件)
 2. 安装nvm
    1. 下载nvm-setup.zip https://github.com/coreybutler/nvm-windows/releases
    2. 安装nvm
@@ -23,13 +24,13 @@
    nvm node_mirror https://npm.taobao.org/mirrors/node/
    nvm npm_mirror https://npm.taobao.org/mirrors/npm/
    ```
-   6. 查看可用的版本，可选参数available，显示所有可下载的版本  
+   1. 查看可用的版本，可选参数available，显示所有可下载的版本  
    `nvm list [available]`
-   7. 安装需要的版本，目前稳定版12.18.2  
+   1. 安装需要的版本，目前稳定版12.18.2  
    `nvm install 12.18.2`
-   8. 使用安装的版本  
+   1. 使用安装的版本  
    `nvm use 12.18.2`
-   9. 查看目前使用版本。*的为当前使用的  
+   1. 查看目前使用版本。*的为当前使用的  
    `nvm list`
-   10. 卸载版本  
+   1.  卸载版本  
    `nvm uninstall 12.18.2`
