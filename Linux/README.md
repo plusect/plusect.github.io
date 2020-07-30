@@ -8,6 +8,8 @@
 ### zip命令
 压缩 `zip [参数] [打包后的文件名] [打包的目录路径]`  
 解压 `unzip xxx`
+### gunzip命令
+解压gz后缀文件 `gunzip xxx`
 ### tar命令
 压缩 `tar -czvf xxx.tar.gz target`  
 解压 `tar -xzvf xxx.tar.gz`
