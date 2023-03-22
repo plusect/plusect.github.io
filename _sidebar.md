@@ -8,6 +8,10 @@
   * [Tomcat优化](Tomcat/Tomcat优化)
 * **数据库**
   * [基本概念](数据库/基础概念)
+  * **MySQL**
+    * [重置密码](数据库/MySQL/重置密码)
+  * **ShardingSphere**
+    * [重置密码](数据库/ShardingSphere/ShardingSphere学习20201124)
 * [**架构设计**](架构设计/README)
   * [架构设计](架构设计/架构设计/README)
     * [高性能](架构设计/架构设计/高性能)

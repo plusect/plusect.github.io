@@ -6,17 +6,93 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="lib/vue.css">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="lib/sidebar-folder.min.css" />
+  <style>
+    main > .content {
+        padding-top: 0;
+    }
+
+    main > .sidebar {
+        padding-top: 10px;
+    }
+
+    .markdown-section {
+        max-width: 100%;
+        padding-top: 10px;
+    }
+
+    h2 {
+        border-bottom: 1px solid #dcdee2;
+    }
+
+    p[data-lang="plantuml"] {
+        overflow: auto !important;
+    }
+</style>
 </head>
 <body>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
+      name: "LAsukaRin's Doc",
       repo: '',
-      loadSidebar: true
+      loadSidebar: '_sidebar.md',
+      alias: {
+                '/.*/sidebar.md': '/sidebar.md', // See #301
+      },
+      subMaxLevel: 5,
+      sidebarDisplayLevel: 1, // set sidebar display level
+      tabs: {
+        persist    : true,      // default
+        sync       : true,      // default
+        theme      : 'classic', // default
+        tabComments: true,      // default
+        tabHeadings: true       // default
+      },
+      plantuml: {
+        skin: 'default',
+        renderSvgAsObject: true
+      },
+      markdown: {
+        renderer: {
+
+            code: function (code, lang) {
+                if (lang === 'drawio' || lang === 'dio') {
+                    if (window.drawioConverter) {
+                        console.log('drawio 转化中')
+                        return window.drawioConverter(code)
+                    } else {
+                        return `<div class='drawio-code'>${code}</div>`
+                    }
+                } else {
+                    return this.origin.code.apply(this, arguments);
+                }
+            }
+        }
+      },
+      search: {
+          depth: 6,
+          hideOtherSidebarContent: true
+      }
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="lib/docsify.min.js"></script>
+  <script src="lib/search.min.js"></script>
+  <script src="lib/zoom-image.min.js"></script>
+  <script src="lib/docsify-copy-code.min.js"></script>
+  <script src="lib/docsify-tabs@1"></script>
+  <script src="lib/prism-java.min.js"></script>
+  <script src="lib/prism-go.min.js"></script>
+  <script src="lib/prism-yaml.min.js"></script>
+  <script src="lib/prism-sql.min.js"></script>
+  <!-- plugins -->
+  <script src="lib/docsify-sidebar-collapse.min.js"></script>
+  <!-- plantuml plugin -->
+  <script src="lib/docsify-plantuml.min.js"></script>
+  <!-- docsify-drawio -->
+  <script src="lib/viewer.min.js"></script>
+  <script src='lib/drawio.js'></script>
 </body>
 </html>
