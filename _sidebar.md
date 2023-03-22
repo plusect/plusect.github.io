@@ -11,7 +11,7 @@
   * **MySQL**
     * [重置密码](数据库/MySQL/重置密码)
   * **ShardingSphere**
-    * [重置密码](数据库/ShardingSphere/ShardingSphere学习20201124)
+    * [ShardingSphere学习20201124](数据库/ShardingSphere/ShardingSphere学习20201124)
 * [**架构设计**](架构设计/README)
   * [架构设计](架构设计/架构设计/README)
     * [高性能](架构设计/架构设计/高性能)
